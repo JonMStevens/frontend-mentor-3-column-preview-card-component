@@ -1,0 +1,21 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#main {
+  outline: 1px solid hotpink;
+}
+div {
+  outline: 1px solid limegreen;
+}
