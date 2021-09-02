@@ -5,17 +5,94 @@
 
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
-  font-size: 15px;
+
+  font-family: "Lexend Deca", sans-serif;
+
+  --standard-font-size: 15px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
 }
+body {
+  display: grid;
+
+  width: 100vw;
+  height: 100vh;
+
+  place-content: center;
+
+  background-color: var(--very-light-gray);
+}
 
 #main {
-  outline: 1px solid hotpink;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 65vw;
 }
-div {
-  outline: 1px solid limegreen;
+.card {
+  display: grid;
+  padding: 4rem;
+  gap: 3rem;
+}
+.card:nth-of-type(1) {
+  background-color: var(--bright-orange);
+}
+.card:nth-of-type(2) {
+  background-color: var(--dark-cyan);
+}
+.card:nth-of-type(3) {
+  background-color: var(--very-dark-cyan);
+}
+h1 {
+  color: var(--very-light-gray);
+  font-size: 2.7rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+}
+p {
+  color: var(--transparent-white);
+  line-height: 1.5;
+  font-size: var(--standard-font-size);
+  margin-bottom: 1rem;
+}
+.card button {
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  width: 70%;
+  font-size: var(--standard-font-size);
+  border: 2px solid currentColor;
+}
+
+.card.card button:hover {
+  color: var(--transparent-white);
+  cursor: pointer;
+}
+
+.card:nth-of-type(1) button {
+  color: var(--bright-orange);
+}
+.card:nth-of-type(1) button:hover {
+  background-color: var(--bright-orange);
+}
+
+.card:nth-of-type(2) button {
+  color: var(--dark-cyan);
+}
+.card:nth-of-type(2) button:hover {
+  background-color: var(--dark-cyan);
+}
+.card:nth-of-type(3) button {
+  color: var(--very-dark-cyan);
+}
+.card:nth-of-type(3) button:hover {
+  background-color: var(--very-dark-cyan);
+}
+.attribution {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
