@@ -9,28 +9,19 @@
   font-family: "Lexend Deca", sans-serif;
 
   --standard-font-size: 15px;
+  background-color: var(--very-light-gray);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
 }
-body {
-  display: grid;
-
-  width: 100vw;
-  height: 100vh;
-
-  place-content: center;
-
-  background-color: var(--very-light-gray);
-}
 
 #main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  width: 65vw;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: clamp(350px, 66vw, 80vw);
+  margin: 4rem auto 4rem auto;
 }
 .card {
   display: grid;
@@ -82,17 +73,11 @@ p {
   color: var(--transparent-white);
   cursor: pointer;
   background: rgba(0 0 0 / 0);
-  outline: 2px solid currentColor;
+  box-shadow: 0 0 0 2px currentColor;
 }
 
 .attribution {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-@media only screen and (max-width: 660px) {
-  #main {
-    grid-template-rows: repeat(3, 1fr);
-  }
 }
